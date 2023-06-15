@@ -22,7 +22,7 @@ export class User {
     deleted_at: Date
 
     async genSalt(): Promise<string> {
-        return bcrypt.genSalt(42);
+        return bcrypt.genSalt(5);
     }
 
     async hashPassword(password: string, salt: string): Promise<string> {
