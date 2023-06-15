@@ -2,6 +2,7 @@ import {DataSource} from 'typeorm';
 import {ConfigService} from '@nestjs/config';
 import {User} from './src/auth/user.entity';
 import {config} from 'dotenv';
+import {InitDB1686842476519} from './src/migrations/1686842476519-initDB';
 
 config();
 
@@ -18,5 +19,5 @@ export default new DataSource({
     entities: [
         User
     ],
-    migrations: [],
+    migrations: [InitDB1686842476519],
 });
