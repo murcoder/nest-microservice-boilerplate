@@ -1,6 +1,9 @@
 import {DataSource} from 'typeorm';
 import {ConfigService} from '@nestjs/config';
-import {User} from '../src/auth/user.entity';
+import {User} from './src/auth/user.entity';
+import {config} from 'dotenv';
+
+config();
 
 const configService = new ConfigService()
 
