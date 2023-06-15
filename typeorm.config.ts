@@ -3,6 +3,7 @@ import {ConfigService} from '@nestjs/config';
 import {User} from './src/auth/user.entity';
 import {config} from 'dotenv';
 import {InitDB1686842476519} from './src/migrations/1686842476519-initDB';
+import {AddUser1686842801218} from './src/migrations/1686842801218-addUser';
 
 config();
 
@@ -19,5 +20,5 @@ export default new DataSource({
     entities: [
         User
     ],
-    migrations: [InitDB1686842476519],
+    migrations: [InitDB1686842476519, AddUser1686842801218],
 });
